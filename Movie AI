@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int genreChoice, moodChoice;
+
+    printf("🎬 Welcome to Movie Recommendation AI 🎬\n\n");
+
+    // Step 1: Ask for Genre
+    printf("Choose a Genre:\n");
+    printf("1. Action\n");
+    printf("2. Comedy\n");
+    printf("3. Horror\n");
+    printf("4. Sci-Fi\n");
+    printf("Enter choice (1-4): ");
+    scanf("%d", &genreChoice);
+
+    // Step 2: Ask for Mood
+    printf("\nChoose a Mood:\n");
+    printf("1. Fun\n");
+    printf("2. Serious\n");
+    printf("3. Thriller\n");
+    printf("Enter choice (1-3): ");
+    scanf("%d", &moodChoice);
+
+    printf("\n🎥 Recommended Movie: ");
+
+    // Step 3: Recommend based on choices
+    if (genreChoice == 1) { // Action
+        if (moodChoice == 1) printf("Guardians of the Galaxy\n");
+        else if (moodChoice == 2) printf("The Dark Knight\n");
+        else if (moodChoice == 3) printf("John Wick\n");
+    } else if (genreChoice == 2) { // Comedy
+        if (moodChoice == 1) printf("The Mask\n");
+        else if (moodChoice == 2) printf("The Truman Show\n");
+        else if (moodChoice == 3) printf("Game Night\n");
+    } else if (genreChoice == 3) { // Horror
+        if (moodChoice == 1) printf("Scary Movie\n");
+        else if (moodChoice == 2) printf("The Conjuring\n");
+        else if (moodChoice == 3) printf("A Quiet Place\n");
+    } else if (genreChoice == 4) { // Sci-Fi
+        if (moodChoice == 1) printf("Back to the Future\n");
+        else if (moodChoice == 2) printf("Interstellar\n");
+        else if (moodChoice == 3) printf("Inception\n");
+    } else {
+        printf("Invalid choice. Try again!\n");
+    }
+
+    return 0;
+}
